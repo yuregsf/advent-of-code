@@ -27,23 +27,22 @@ int main(int argc, char **argv){
     std::string game = line.substr(idx_column+2, line.length() - 1);
     size_t game_len = game.length();
     
-     int num_aux = 0;
-     int k = 0;
-     for(size_t i = 0; i < game_len; ++i){
-       k = 0;
+     int num_aux, k;
+     int i = 0;
+     while(i < game_len){
+       num_aux = 0;
        while(game[i] >= '0' && game[i] <= '9'){
-         num_aux = k == 0 ? 0 : num_aux;
-         num_aux = num_aux * (k > 0 ? 10 : 1) + game[i] - '0';
+         num_aux = num_aux * (num_aux > 0 ? 10 : 1) + game[i] - '0';
          ++i;
-         ++k;
        }
+       ++i;
     
        if(game[i] == 'r'){
          if(num_aux > 12){
            id = 0;
            break;
          }
-         i += 4;
+         i += 5;
          continue;
        }
     
@@ -52,7 +51,7 @@ int main(int argc, char **argv){
            id = 0;
            break;
          }
-         i += 6;
+         i += 7;
          continue;
        }
     
@@ -61,11 +60,10 @@ int main(int argc, char **argv){
            id = 0;
            break;
          }
-         i += 5;
+         i += 6;
          continue;
        }
      }
-    printf("id: %d\n", id);
     acc += id;
   }
 
