@@ -5,6 +5,7 @@
 ### C ###
 # Prerequisites
 *.d
+a.out
 
 # Object files
 *.o
