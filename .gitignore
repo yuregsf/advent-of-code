@@ -70,3 +70,5 @@ dkms.conf
 
 # End of https://www.gitignore.io/api/c,visualstudiocode
 
+node_modules/
+*.js
