@@ -1,4 +1,4 @@
-import a from '../lib/index'
+import { testInput, solve } from '../lib'
 
 type Rule = Map<number, {
   before: number[],
@@ -72,7 +72,7 @@ function part2(input: string): number {
   return sumMids(wrongs)
 }
 
-a.testInput('input.test', part1, 143)
-a.testInput('input.test', part2, 123)
-a.solve('input', part1)
-a.solve('input', part2)
+testInput('input.test', part1, 143)
+testInput('input.test', part2, 123)
+solve('input', part1)
+solve('input', part2)
