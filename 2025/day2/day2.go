@@ -32,16 +32,6 @@ func Solve1(lines []string) (uint64, error) {
 	return count, nil
 }
 
-func probe(t string) bool {
-	p := t[:len(t)/2]
-
-	if p == t[len(p):] {
-		return true
-	}
-
-	return false
-}
-
 func Solve2(lines []string) (uint64, error) {
 	line := lines[0]
 	ranges := strings.SplitSeq(line, ",")

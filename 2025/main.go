@@ -1,8 +1,7 @@
 package main
 
 import (
-	"2025/day1"
-	"2025/day2"
+	"2025/day3"
 )
 
 func handle_err(err error) {
@@ -13,10 +12,6 @@ func handle_err(err error) {
 
 func main() {
 	var err error
-	err = day1.Solve("day1/input_1")
-	handle_err(err)
-
-	println("==============")
-	err = day2.Solve("day2/input_2")
+	err = day3.Solve("day3/input_3")
 	handle_err(err)
 }
